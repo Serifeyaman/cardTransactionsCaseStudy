@@ -13,6 +13,7 @@
     "@react-navigation/bottom-tabs": "^6.6.1",
     "@react-navigation/native": "^6.1.18",
     "lightningcss-win32-x64-msvc": "^1.28.1",
+    "nativewind": "^2.0.11",
     "react": "18.2.0",
     "react-native": "0.72.17",
     "react-native-gesture-handler": "^2.20.2",
@@ -38,6 +39,7 @@
     "metro-react-native-babel-preset": "^0.76.9",
     "prettier": "^2.4.1",
     "react-test-renderer": "18.2.0",
+    "tailwindcss": "^3.3.2",
     "typescript": "4.8.4"
   },
   "engines": {
