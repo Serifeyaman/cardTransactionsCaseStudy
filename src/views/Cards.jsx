@@ -1,12 +1,32 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
+import React from 'react';
+
+import {
+  CardInfoBanner,
+  MoneyTransactions,
+  CardInfo,
+  CardTransactions,
+} from '@app/components';
 
 const Cards = () => {
   return (
-    <View>
-      <Text>Cards</Text>
-    </View>
-  )
-}
+    <>
+      <CardInfoBanner />
+      <SafeAreaView style={styles.container}>
+        <MoneyTransactions />
+        <CardInfo />
+        <CardTransactions />
+      </SafeAreaView>
+    </>
+  );
+};
 
-export default Cards
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: 20,
+    backgroundColor: '#f5f6f7',
+  },
+});
+
+export default Cards;

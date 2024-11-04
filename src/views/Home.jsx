@@ -3,8 +3,8 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <View className="flex-1 items-center justify-center bg-blue-500">
-      <Text className="text-white text-lg">Merhaba NativeWind!</Text>
+    <View className="flex-1 bg-[#f5f6f7]">
+      <Text>home</Text>
     </View>
   )
 }
