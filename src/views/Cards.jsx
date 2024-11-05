@@ -1,4 +1,4 @@
-import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
+import {SafeAreaView, StatusBar, StyleSheet, Text} from 'react-native';
 import React from 'react';
 
 import {
@@ -7,6 +7,7 @@ import {
   CardInfo,
   CardTransactions,
 } from '@app/components';
+import LinearGradient from 'react-native-linear-gradient';
 
 const Cards = () => {
   return (
