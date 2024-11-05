@@ -7,12 +7,9 @@ import {
   CardInfo,
   CardTransactions,
 } from '@app/components';
-import {useTheme} from '@app/lib';
-import {theme} from '../lib/theme';
+import { theme } from '@app/lib';
 
 const Cards = () => {
-  const {theme} = useTheme();
-
   return (
     <>
       <CardInfoBanner />
