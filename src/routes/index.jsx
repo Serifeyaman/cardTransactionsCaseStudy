@@ -1,50 +1,47 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import {Cards, Home, Profile} from '@app/views';
 import {Icons} from '@app/components';
+import {useTheme} from '@app/lib';
+import {View} from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
 const Routes = () => {
   const insets = useSafeAreaInsets();
+  const {theme} = useTheme();
 
   return (
     <Tab.Navigator
-      // tabBar={{
-      //   showIcon: true,
-      //   showLabel: false,
-      //   lazyLoad: true,
-      //   style: {
-      //     backgroundColor: 'transparent',
-      //     borderTopWidth: 0,
-      //     position: 'absolute',
-      //     left: 50,
-      //     right: 50,
-      //     bottom: 20,
-      //     height: 100,
-      //   },
-      // }}
       initialRouteName="Cards"
       screenOptions={() => ({
-        tabBarStyle: {
-          borderTopWidth: 2, 
-          borderTopColor: '#e13915',
-        },
         headerTitleAlign: 'center',
-        headerTitleStyle: {fontSize: 16, color: '#313538'},
-        // headerStatusBarHeight: 14,
+        headerTitleStyle: {
+          fontSize: theme.typography.fontSizes.medium,
+          color: theme.colors.dark_secondary,
+        },
+        headerStatusBarHeight: 16,
         headerTransparent: false,
         // headerStyle: {marginTop: insets.top || 0},
-        tabBarActiveTintColor: '#e13915',
-        tabBarInactiveTintColor: '#c1c8cd',
-        tabBarLabelStyle: {fontSize: 11, fontWeight: '600'},
-        tabBarIconStyle: {height: 20, width: 20},
+        tabBarActiveTintColor: theme.colors.primary,
+        tabBarInactiveTintColor: theme.colors.tint,
+        tabBarLabelStyle: {
+          fontSize: theme.typography.fontSizes.tabbarLabel,
+          fontWeight: '500',
+        },
       })}>
       <Tab.Screen
         options={{
-          tabBarIcon: props => <Icons.Home width="20" height="20" {...props} />,
+          tabBarIcon: props =>
+            props.focused ? (
+              <View className="w-2/4 justify-center flex-1 items-center border-t-2 border-primary">
+                <Icons.Home {...props} />
+              </View>
+            ) : (
+              <Icons.Home {...props} />
+            ),
           tabBarLabel: 'Ana Sayfa',
         }}
         name="Home"
@@ -54,7 +51,14 @@ const Routes = () => {
         options={{
           headerTransparent: true,
           headerTitle: 'Kartım',
-          tabBarIcon: props => <Icons.Card width="20" height="20" {...props} />,
+          tabBarIcon: props =>
+            props.focused ? (
+              <View className="w-2/4 justify-center flex-1 items-center border-t-2 border-primary">
+                <Icons.Card {...props} />
+              </View>
+            ) : (
+              <Icons.Card {...props} />
+            ),
           tabBarLabel: 'Kartlar',
         }}
         name="Cards"
@@ -63,7 +67,14 @@ const Routes = () => {
       <Tab.Screen
         options={{
           tabBarLabel: 'Profil',
-          tabBarIcon: props => <Icons.User width="20" height="20" {...props} />,
+          tabBarIcon: props =>
+            props.focused ? (
+              <View className="w-2/4 justify-center flex-1 items-center border-t-2 border-primary">
+                <Icons.User {...props} />
+              </View>
+            ) : (
+              <Icons.User {...props} />
+            ),
         }}
         name="Profile"
         component={Profile}

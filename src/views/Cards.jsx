@@ -8,6 +8,7 @@ import {
   CardTransactions,
 } from '@app/components';
 import {useTheme} from '@app/lib';
+import {theme} from '../lib/theme';
 
 const Cards = () => {
   const {theme} = useTheme();
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 20,
-    backgroundColor: '#f5f6f7',
+    backgroundColor: theme.colors.background,
   },
 });
 

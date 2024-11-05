@@ -3,7 +3,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <View className="flex-1 bg-[#f5f6f7]">
+    <View className="flex-1 bg-background">
       <Text>home</Text>
     </View>
   )
