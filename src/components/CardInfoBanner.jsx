@@ -10,14 +10,14 @@ const CardInfoBanner = () => {
 
   return (
     <LinearGradient
-      colors={['#FFFFFF', '#f0c5b7']} 
+      colors={['#FFFFFF', '#f2e7e4', '#f5e0da']}
       start={{x: 0.4, y: 0.1}}
       end={{x: 0.4, y: 0.9}}
       locations={[0.1, 0.6, 0.8]}
       className="h-1/3 w-full px-20">
       <LinearGradient
         className="w-full h-3/5 top-[107px] rounded-t-xl p-5 justify-between shadow-xl"
-        colors={['#EF4A15', '#FFFFFF', '#EF4A15']} 
+        colors={['#EF4A15', '#FFFFFF', '#EF4A15']}
         start={{x: 1, y: 0}}
         end={{x: 0, y: 1}}
         locations={[0.4, 1, 0.7]}>

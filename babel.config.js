@@ -20,6 +20,7 @@ module.exports = {
           '@app/routes': './src/routes',
           '@app/components': './src/components',
           '@app/assets': './src/assets',
+          '@app/lib': './src/lib',
         },
       },
     ],

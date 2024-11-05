@@ -1,4 +1,4 @@
-import {SafeAreaView, StatusBar, StyleSheet, Text} from 'react-native';
+import {SafeAreaView, StyleSheet} from 'react-native';
 import React from 'react';
 
 import {
@@ -7,9 +7,11 @@ import {
   CardInfo,
   CardTransactions,
 } from '@app/components';
-import LinearGradient from 'react-native-linear-gradient';
+import {useTheme} from '@app/lib';
 
 const Cards = () => {
+  const {theme} = useTheme();
+
   return (
     <>
       <CardInfoBanner />
